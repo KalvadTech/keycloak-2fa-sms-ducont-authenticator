@@ -1,4 +1,4 @@
-package dasniko.keycloak.authenticator;
+package KalvadTech.keycloak.authenticator;
 
 import org.keycloak.Config;
 import org.keycloak.authentication.Authenticator;
@@ -11,7 +11,7 @@ import org.keycloak.provider.ProviderConfigProperty;
 import java.util.List;
 
 /**
- * @author Niko Köbler, https://www.n-k.de, @dasniko
+ * @author Niko Köbler, https://www.n-k.de, @KalvadTech
  */
 public class SmsAuthenticatorFactory implements AuthenticatorFactory {
 
@@ -58,7 +58,9 @@ public class SmsAuthenticatorFactory implements AuthenticatorFactory {
 			new ProviderConfigProperty("length", "Code length", "The number of digits of the generated code.", ProviderConfigProperty.STRING_TYPE, 6),
 			new ProviderConfigProperty("ttl", "Time-to-live", "The time to live in seconds for the code to be valid.", ProviderConfigProperty.STRING_TYPE, "300"),
 			new ProviderConfigProperty("senderId", "SenderId", "The sender ID is displayed as the message sender on the receiving device.", ProviderConfigProperty.STRING_TYPE, "Keycloak"),
-			new ProviderConfigProperty("simulation", "Simulation mode", "In simulation mode, the SMS won't be sent, but printed to the server logs", ProviderConfigProperty.BOOLEAN_TYPE, true)
+			new ProviderConfigProperty("simulation", "Simulation mode", "In simulation mode, the SMS won't be sent, but printed to the server logs", ProviderConfigProperty.BOOLEAN_TYPE, true),
+			new ProviderConfigProperty("ducontUserId", "Ducont User Id", "In simulation mode, the SMS won't be sent, but printed to the server logs", ProviderConfigProperty.STRING_TYPE, "keycloak"),
+			new ProviderConfigProperty("ducontPassword", "Ducont Password", "In simulation mode, the SMS won't be sent, but printed to the server logs", ProviderConfigProperty.PASSWORD, "keycloak")
 		);
 	}
 

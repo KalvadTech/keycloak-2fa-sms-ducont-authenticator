@@ -1,6 +1,6 @@
-package dasniko.keycloak.authenticator;
+package KalvadTech.keycloak.authenticator;
 
-import dasniko.keycloak.authenticator.gateway.SmsServiceFactory;
+import KalvadTech.keycloak.authenticator.gateway.SmsServiceFactory;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
 import org.keycloak.authentication.Authenticator;
@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 import java.util.Locale;
 
 /**
- * @author Niko Köbler, https://www.n-k.de, @dasniko
+ * @author Niko Köbler, https://www.n-k.de, @KalvadTech
  */
 public class SmsAuthenticator implements Authenticator {
 
@@ -106,7 +106,7 @@ public class SmsAuthenticator implements Authenticator {
 	@Override
 	public void setRequiredActions(KeycloakSession session, RealmModel realm, UserModel user) {
 		// this will only work if you have the required action from here configured:
-		// https://github.com/dasniko/keycloak-extensions-demo/tree/main/requiredaction
+		// https://github.com/KalvadTech/keycloak-extensions-demo/tree/main/requiredaction
 		user.addRequiredAction("mobile-number-ra");
 	}
 
