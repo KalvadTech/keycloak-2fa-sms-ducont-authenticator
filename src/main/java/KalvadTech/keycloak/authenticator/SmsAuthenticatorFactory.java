@@ -24,7 +24,7 @@ public class SmsAuthenticatorFactory implements AuthenticatorFactory {
 
 	@Override
 	public String getDisplayType() {
-		return "SMS Authentication";
+		return "Ducont SMS Authentication";
 	}
 
 	@Override
