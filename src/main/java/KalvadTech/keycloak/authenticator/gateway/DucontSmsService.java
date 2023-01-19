@@ -35,7 +35,8 @@ public class DucontSmsService implements SmsService {
 		MediaType mediaType = MediaType.parse("application/json");
 		UUID uuid = UUID.randomUUID();
         String uuidAsString = uuid.toString();
-		String[] recipients = {phoneNumber};
+		formattedPhoneNumber = phoneNumber.replace("+", "");
+		String[] recipients = {formattedPhoneNumber};
 		content = new JSONObject()
 			.put("userId", ducontUserId)
 			.put("password", ducontPassword)
